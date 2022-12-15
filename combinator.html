@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+</head>
+<body>
+    <h1>Combinators</h1>
+    <!-- Here we're going to learn about Combinators, which basically help to combine two or more selectors. There are many ways to combine two or more selectors which are - -->
+    <!-- Descendent Combinator -->
+    <!-- Child Combinator -->
+    <!-- Adjacent Sibling Combinator -->
+    <!-- General Sibling Combinator -->
+
+    <h2>Descendent Combinator</h2>
+    <!-- A descendant Combinator is used to select all the descendants of an immediate ancestor. It is represented by a single space " " between the two selectors. -->
+
+    <!-- let's take a case where you want to change the text color of all the paragraphs inside a div. So what we can do is to select them, we need to write div p. -->
+    <div class="first">
+        <p>
+            Hello Welcome let's learn about the descendant selector
+        </p>
+         </div>
+         <h2>Child Combinator</h2>
+         <!-- A Child Combinator is referred to by >. We insert a child combinator in between two selectors so that we can change the style of the second selector, only if the second selector is a direct child of the first one. -->
+
+         <!-- For example, if you want to select the span which is a direct child of h1, and keep another span unchanged. We can just write h1>span. -->
+         <div class="child">
+            <h1>This is about <span>CHILD </span> selector</h1>
+            <h2>Hello my Name is <span>Kpail Sarkar</span> </h2>
+         </div>
+         <h2>Adjacent Sibling Combinator</h2>
+         <!-- Adjacent Sibling Combinator can be denoted by +. As the name suggests, it helps to select the element of the second selector only if the second selector is adjacent to the first one. -->
+
+         <!-- For example, if we want to style all the p tags after the h1 tag, we can use an adjacent sibling combinator. It will only select all the paragraphs which are exactly after the h1 tag. -->
+         <h1>This is about Adjacent Sibling Combinator</h1>
+         <p>Lets learn about Adjacent Sibling Combinator</p>
+        <h2>General Sibling Combinator</h2>
+            <!-- General Sibling Combinator helps to select the sibling of an element even if they are not adjacent, but the siblings must be below in the hierarchy. It can e denoted by ~. -->
+
+            <!-- For example, if we need to select all the paragraphs under the h1 tag, then we can simply write h3~p. -->
+            <h3>This is about General Sibling Combinator</h3>
+            <p>Lets learn about General Combinator </p>
+            <h1>Pseudo Elements</h1>
+            <!-- We can often get confuse between Pseudo Classes and Pseudo Elements. Pseudo Classes are the selector which selects elements when it is in a specific state. -->
+            <!-- Whereas, Pseudo Elements enable to add a whole new HTML element into the markup. It is applied with a double semicolon::. -->
+            <!-- ::after -->
+            <!-- ::before -->
+            <!-- They are special because they are used along with the content property. The content property helps to add content either after the selected element or before as per the pseudo-element used. -->
+            <!-- For example, if we can't access the HTML document but can only access the CSS document, then with the help of ::before element we can add content before the selected element. -->
+            <!-- For another example, we can enter a dummy string in the content, and then we can enter the height and width along with display: block, so that we can style it like an element. -->
+            <h1>This is about Pseudo Elements</h1>
+            <p class="pseudo">lets learn about pseudo elements</p>
+    <style>
+        *{
+            background-color:#E5D68A ;
+        }
+        .first p{
+            color:red;
+            background-color: white;
+            font-size:x-large;
+        }
+        h1 > span{
+            color:red;
+            background-color: blanchedalmond;
+        }
+        h1 + p{
+            color:red;
+            background-color: aquamarine;
+        }
+        h3 ~ p{
+            color: red;
+            background-color: cornsilk;
+        }
+        .pseudo:hover::before{
+            content: "Kapil Sarkar";
+            display: block;
+            font-size:50px;
+            color: red;
+        }
+    </style>
+</body>
+</html>

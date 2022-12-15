@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chained Selector</title>
+</head>
+<body>
+    <h1>Chained Selector</h1>
+    <p class="first second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nobis, rem inventore necessitatibus sint reprehenderit ullam ducimus facilis illo laudantium iste consequatur quod maxime enim ipsa dolorem molestias doloribus tenetur.</p>
+    <p class="third">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nulla est quisquam. Laudantium quas doloremque expedita reiciendis cupiditate quo. Labore provident rem, obcaecati voluptatibus accusantium dignissimos eaque. Esse, neque placeat!</p>
+    <!-- Chained Selector -->
+    <!-- Chained Selector can be used in multiple ways, here I'm dicussing the most common way of using it by chaining one class name with the other with the help of .. If an element have two class name i.e. first and second then with the help of . between both name with can select that specific element with both class name. -->
+    <style>
+        *{
+            background-color: aquamarine;
+        }
+        .first.second{
+            color: brown;
+            background-color: bisque;
+        }
+        .third{
+            color: black;
+            background-color: azure;
+        }
+    </style>
+</body>
+</html>
